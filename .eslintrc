@@ -1,0 +1,9 @@
+{
+  "extends": "standard",
+  "globals": {
+    "App": true,
+    "wx": true,
+    "Page": true,
+    "getApp": true
+  }
+}

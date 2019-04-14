@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="userinfo" capture-bind="touchstart" bind:touchstart="getCode">
+    <button wx:if="{{!isAuthenticated && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+     获取头像昵称
+    </button>
+
+    <block wx:else>
+      <open-data type="userAvatarUrl"></open-data>
+      <open-data type="userNickName"></open-data>
+    </block>
+
+    <view>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取电话</button>
+    </view>
+
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}</text>
+    </view>
+  </view>
+
+</view>
